@@ -27,32 +27,29 @@ div.middle {
     margin: 0 auto;
     width: 45%;
     box-sizing: border-box;
-}
-
-div.middle h1 {
-    color: white;
-    padding-top: 30px;
-    padding-bottom: 10%;
-    font-size: 45px;
-    text-align: center;
-}
-
-div.middle h2 {
-    color: black;
-    padding-top: 130px;
-    font-size: 35px;
-    text-align: center;
-}
-
-div.middle p, div.middle ol {
-    padding-top: 16px;
+    & h1 {
+        color: white;
+        font-size: 45px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10%;
+    }
+    & h2 {
+        color: black;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 130px;
+    }
+    & p, & ol {
+        padding-top: 16px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-    div.middle h2 {
-        font-size: 30px;
-    }
     div.middle {
         width: 70%;
+        & h2 {
+            font-size: 30px;
+        }
     }
 }
