@@ -1,0 +1,2 @@
+static/*.png filter=lfs diff=lfs merge=lfs -text
+static/*.ttf filter=lfs diff=lfs merge=lfs -text
