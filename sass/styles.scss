@@ -35,27 +35,36 @@ div.middle {
     box-sizing: border-box;
     & h1 {
         color: var(--main-text1-color);
-        font-size: 45px;
+        font-size: 50px;
         text-align: center;
-        padding-top: 30px;
+        margin-top: -140px;
         padding-bottom: 10%;
     }
     & h2 {
         color: var(--main-text2-color);
-        font-size: 35px;
+        font-size: 40px;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 40px;
     }
     & p, & ol {
         padding-top: 16px;
+    }
+    & a {
+        color: lightgoldenrodyellow;
+    }
+    & a:hover {
+        color: lightblue;
     }
 }
 
 @media only screen and (max-width: 800px) {
     div.middle {
         width: 70%;
+        & h1 {
+            font-size: 45px;
+        }
         & h2 {
-            font-size: 30px;
+            font-size: 35px;
         }
     }
 }
