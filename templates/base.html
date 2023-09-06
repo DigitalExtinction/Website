@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="font" href="ShareTechMono-Regular.ttf" sizes="100vw">
+    <link rel="preload" as="image" imagesrcset="header_wide.svg" sizes="100vw">
+    <style>
+      @font-face {
+        font-family: "shareTechMono";
+        src: url("ShareTechMono-Regular.ttf");
+      }
+      * {
+        font-family: "shareTechMono" !important;
+      }
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8DLWWSZX1"></script>
     <script>
@@ -17,8 +30,16 @@
       content="RTS, real-time, strategy, game, gaming, Rust, free software,
                open source, Linux gaming">
     <meta name="author" content="Martin Indra">
+    <link rel="stylesheet" href="/styles.css">
   </head>
-  <body>
-    {% block content %} {% endblock %}
+  <body style="background-color: #340000;">
+    <div id="header">
+      <div class="middle">
+        <h2>_digital&ZeroWidthSpace;_extinction</h2>
+      </div>
+    </div>
+    <div class="middle">
+      {% block content %} {% endblock %}
+    </div>
   </body>
 </html>
