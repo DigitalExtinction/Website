@@ -99,7 +99,6 @@ div.middle {
                 width: 26px;
                 height: 26px;
                 padding: 8px 16px 8px 32px;
-                filter: invert(1);
                 float: left;
             }
 
@@ -114,6 +113,11 @@ div.middle {
                 margin-top: 8px;
                 margin-bottom: 24px;
                 background-color: #d2854a;
+                & img {
+                    width: 34px;
+                    height: 34px;
+                    padding: 4px 12px 4px 28px;
+                }
             }
         }
     }
