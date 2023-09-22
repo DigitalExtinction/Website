@@ -34,6 +34,7 @@ div#header {
 div.middle {
     margin: 0 auto;
     width: 45%;
+    min-width: 780px;
     box-sizing: border-box;
     & h1 {
         color: var(--main-text1-color);
@@ -48,6 +49,12 @@ div.middle {
         text-align: center;
         padding-top: 40px;
     }
+    & h3 {
+        color: var(--main-text1-color);
+        font-size: 30px;
+        text-align: center;
+        padding-top: 20px;
+    }
     & p, & ol {
         padding-top: 16px;
     }
@@ -57,16 +64,84 @@ div.middle {
     & a:hover {
         color: lightblue;
     }
+    & #download {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        & h2 {
+            color: var(--main-text1-color);
+            flex-basis: 100%;
+        }
+
+        & > a, & > div {
+            box-sizing: border-box;
+            flex-basis: 45%;
+        }
+        & > a {
+            display: block;
+
+            margin: 16px;
+            padding: 16px 0;
+            text-align: center;
+            background-color: #701e13;
+            border-radius: 10px;
+            border: 1px solid #ddb991;
+
+            // Anchor specific
+            color: lightgoldenrodyellow;
+
+            & > p {
+                margin: 0;
+                padding: 0;
+            }
+            & > img {
+                width: 26px;
+                height: 26px;
+                padding: 8px 16px 8px 32px;
+                float: left;
+            }
+
+            &:hover {
+                margin-top: 8px;
+                margin-bottom: 24px;
+                background-color: #d2854a;
+                // Anchor specific
+                color: lightgoldenrodyellow;
+                & > img {
+                    width: 34px;
+                    height: 34px;
+                    padding: 4px 12px 4px 28px;
+                }
+            }
+        }
+
+        & > div#download-steps {
+            background-color: transparent;
+            text-align: left;
+            flex-grow: 1;
+            margin: 0 10%;
+            border: 0;
+        }
+    }
 }
 
 @media only screen and (max-width: 800px) {
     div.middle {
-        width: 70%;
+        width: 80%;
+        min-width: 350px;
         & h1 {
             font-size: 45px;
         }
         & h2 {
             font-size: 35px;
+        }
+        & #download a {
+            flex-basis: 100%;
+            min-width: 250px;
         }
     }
 }
