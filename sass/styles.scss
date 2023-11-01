@@ -23,15 +23,63 @@ body {
     padding-bottom: 30px;
 }
 
-div#header {
-    background: url("header_wide.svg") center repeat-x;
-    background-size: contain;
-    background-size: auto 100%;
-    height: 600px;
+div#wrapper, div.bg {
+    height: 700px;
+}
+
+div#wrapper {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    perspective: 1px;
+}
+
+div.bg {
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: absolute;
+    top: 0;
     width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+div#background {
+    background-image: url("header_1.svg");
+}
+
+div#midground5 {
+    background-image: url("header_7.svg");
+}
+
+div#midground4 {
+    background-image: url("header_6.svg");
+}
+
+div#midground3 {
+    background-image: url("header_5.svg");
+}
+
+div#midground2 {
+    background-image: url("header_4.svg");
+}
+
+div#midground {
+    background-image: url("header_3.svg");
+}
+
+div#foreground {
+    background-image: url("header_wide_0.svg");
+}
+
+div#title {
+    z-index: 2;
 }
 
 div.middle {
+    z-index: 1;
+    position: relative;
     margin: 0 auto;
     width: 45%;
     min-width: 780px;
@@ -130,6 +178,9 @@ div.middle {
 }
 
 @media only screen and (max-width: 800px) {
+    div#wrapper, div.bg {
+        height: 600px;
+    }
     div.middle {
         width: 80%;
         min-width: 350px;
